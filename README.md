@@ -13,8 +13,75 @@ QuickGPT is a full-stack AI chat application with a React/Vite frontend and an E
 
 ## Project Structure
 
-- `client/` - React app
-- `server/` - API server
+```text
+QuickGPT/
+├── client/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   │   ├── assets.js
+│   │   │   └── prism.css
+│   │   ├── components/
+│   │   │   ├── ChatBox.jsx
+│   │   │   ├── Message.jsx
+│   │   │   └── Sidebar.jsx
+│   │   ├── context/
+│   │   │   └── AppContext.jsx
+│   │   ├── pages/
+│   │   │   ├── Community.jsx
+│   │   │   ├── Credits.jsx
+│   │   │   ├── Loading.jsx
+│   │   │   └── Login.jsx
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js
+│   └── vercel.json
+├── server/
+│   ├── configs/
+│   │   ├── db.js
+│   │   ├── imageKit.js
+│   │   └── openai.js
+│   ├── controllers/
+│   │   ├── chatController.js
+│   │   ├── creditController.js
+│   │   ├── messageController.js
+│   │   ├── userController.js
+│   │   └── webhooks.js
+│   ├── middlewares/
+│   │   └── auth.js
+│   ├── models/
+│   │   ├── Chat.js
+│   │   ├── Transaction.js
+│   │   └── User.js
+│   ├── routes/
+│   │   ├── chatRoutes.js
+│   │   ├── creditRoutes.js
+│   │   ├── messageRoutes.js
+│   │   └── userRoutes.js
+│   ├── package.json
+│   ├── server.js
+│   └── vercel.json
+├── README.md
+└── QuickGPT_How_To_Run_Project.pdf
+```
+
+### Client Layout
+
+- `src/components/` contains reusable UI pieces like the chat box, message bubble, and sidebar.
+- `src/pages/` contains route-level screens such as login, loading, credits, and community.
+- `src/context/AppContext.jsx` manages shared app state.
+- `src/assets/` stores icons, images, and prism styles.
+
+### Server Layout
+
+- `configs/` contains database and external service configuration.
+- `controllers/` contains request handlers for chat, credits, messages, users, and webhooks.
+- `middlewares/` contains authentication middleware.
+- `models/` contains MongoDB schemas.
+- `routes/` contains API route definitions.
+- `server.js` boots the Express server and registers all routes.
 
 ## Features
 
